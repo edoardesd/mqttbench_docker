@@ -94,3 +94,17 @@
 - DNS discovery image
   + The image has been configured with the discovery extension. 
   This permits the creation of broker clusters.
+  
+  ## MOSQUITTO
+- Source: 
+  + based on: [1.6 Alpine](https://github.com/mqttbench_docker/mosquitto)
+  + final image: [custom img](https://hub.docker.com/r/flipperthedog/mosquitto)
+
+- Adaptation done:
+  + add the following packages to the Dockerfile (via `apk add`):
+    - iputils
+    - iproute2
+    - net-tools
+    - iperf
+    - busybox-extras
+    - bash
